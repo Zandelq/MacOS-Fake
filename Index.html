@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fake macOS Desktop — Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="desktop" class="desktop">
+    <div id="menu-bar">
+      <div class="left">
+        <div class="apple"></div>
+        <div class="app-name">Safari</div>
+      </div>
+      <div class="center" id="center-bar"></div>
+      <div class="right">
+        <div id="battery" class="status">Battery: <span id="battery-pct">--</span></div>
+        <div id="time" class="status">--:--:--</div>
+      </div>
+    </div>
+
+    <div id="apps-root"></div>
+
+    <div class="dock" id="dock" role="toolbar" aria-label="Dock">
+      <div class="dock-icon" data-app="browser" title="Safari (Fake)">
+        <img src="assets/safari.svg" alt="Safari" />
+      </div>
+      <div class="dock-icon" data-app="calculator" title="Calculator">
+        <svg viewBox="0 0 64 64" class="icon-calc"><rect x="10" y="8" width="44" height="48" rx="6"/><rect x="18" y="16" width="28" height="8" rx="3" fill="#fff"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/calculator.js"></script>
+</body>
+</html>
